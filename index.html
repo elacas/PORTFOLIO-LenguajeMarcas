@@ -10,7 +10,7 @@
     <meta property="og:image" content="images\logo_web.png">
     <meta property="og:description" content="página portfolio, muestra proyectos y cosas interesantes">
     <link rel="icon" href="images/logo_web.png">
-    <title><h1>--Ven, resguárdate-- | Portfolio Elaine</h1></title>
+    <title>Portfolio Elaine</title>
 </head>
 
 <body>
@@ -18,35 +18,109 @@
     <header>
         <div class="Imagen_header">
             <a href="index.html">
-                <img src="" alt="avatar Elaine-Desarrolladora y aventurera tecnológica">
+                <img src="images\foto_perfil.avif" alt="avatar Elaine-Desarrolladora y aventurera tecnológica">
             </a>
         </div>
     </header>
  
     <nav>
         <ul class="lista_nav">
-            <li><a href="#sobre_mi">sobre mí</a></li>
-            <li><a href="#proyectos">proyectos</a></li>
-            <li><a href="#hobbits">hobbits</a></li>
-            <li><a href="#cv">sendero andado</a></li>
+            <li><button><a href="#sobre_mi">sobre mí</a></button></li>
+            <li><button><a href="#proyectos">proyectos</a></button></li>
+            <li><button><a href="#hobbits">hobbits</a></button></li>
+            <li><button><a href="#cv">sendero andado</a></button></li>
+             <audio id="musica-fondo" loop>
+             <source src="sonido\medieval-citytavern-ambient-235876.mp3" type="audio/mpeg">
+             <source src="sonido\medieval-citytavern-ambient-235876.mp3" type="audio/mpeg">
+            </audio>
+          <button id="toggle-musica">🎵 Música</button>
         </ul>
     </nav>
 
     <main>
-        <div><section class="sobre_mi">
+        <section class="sobre_mi">
             <h2>sobre mi</h2>
-        </section></div>
+            <p>Estudiante de primer año de Asir, superviviente/trabajadora cara al público y aficionada a la tecnología y a la fantasía. La curiosidad és mi motor.</p>
+        </section>
 
         <section class="proyectos">
             <h2>proyectos</h2>
+            
+            <div class="proyect-grid">
+                <!-- Repite este bloque para cada proyecto -->
+                <article class="proyect-card">
+                    <a href="https://v0-shingeki-proyect.vercel.app/#presentacion">
+                    <img src="images\foto_shingeki.jpg" alt="proyecto_shingeki"></a>
+                        <h3>proyecto shingeki</h3>
+                        <p>Proyecto en curso de chat mediante IA con los personajes de Shingeki no kyojin (Ataque a los titanes)</p>
+                </article>
+            </div>
+            
+            <div>
+                <article class="proyect-card">
+                    <a href=""><img src="images\foto_taberna.jpg" alt=""></a>
+                    <h3>Taberna-Asir</h3>
+                    <p>Web de estética pixel-art con tesst sobre las materias dadas en ASIR, ránking y un pequeño tablero de anuncios para quién tenga algo que decir</p>
+                </article>
+            </div>
+
+            <div>
+                <article class="proyect-card">
+                    <a href="https://github.com/elacas?tab=repositories">
+                    <img src="images\foto_github.jpg" alt=""></a>
+                    <h3>Repositorios GitHub</h3>
+                    <p>Repositorios varios con ejercicios y prácticas de diferentes fuentes.</p>
+                </article>
+            </div>
         </section>
 
         <section class="hobbits">
             <h2>hobbits</h2>
+            <div>
+                <article class="hobbits-card">
+                    <a href="https://github.com/elacas?tab=repositories">
+                    <img src="images\foto_github.jpg" alt=""></a>
+                    <h3>lectura</h3>
+                    <p>Fantasía 100%, especial mención al Hobbit. </p>
+                </article>
+            </div>
+
+            <div>
+                <article class="hobbits-card">
+                    <a href="https://github.com/elacas?tab=repositories">
+                    <img src="images\foto_github.jpg" alt=""></a>
+                    <h3>Música</h3>
+                    <p>Aficionada aprendiendo a tocar el bajo ¡groove it's life!</p>
+                </article>
+            </div>
+
+            <div>
+                <article class="honnits-card">
+                    <a href="https://github.com/elacas?tab=repositories">
+                    <img src="images\foto_github.jpg" alt=""></a>
+                    <h3>Fotografía</h3>
+                    <p>Los paisajes naturales tienen una fortaleza y serenidad impresionantes, solo hay que fijarse en ellos</p>
+                </article>
+            </div>
+
+            <div>
+                <article class="proyect-card">
+                    <a href="https://github.com/elacas?tab=repositories">
+                    <img src="images\foto_github.jpg" alt=""></a>
+                    <h3>Investigar desarrollo web, programación y cosas así</h3>
+                    <p>Salto de un "sabías que" de python y acabo con curiosidades de I.A, ¿why not?</p>
+                </article>
+            </div>
         </section>
 
         <section class="cv">
             <h2>sendero andado</h2>
+            <p>
+                <strong>Formación</strong><br>
+                Después de cursas bachillerto, emprendí la ardua tarea de acabar el grado medio de servicios en restauración en la Escola d'Hotelería i Turisme de Barcelona.<br>
+                Algunos años después, trasladé mi morada a un pueblecito de Pontevedra dónde me surgió la oportunidad de estudiar algo que siempre me había interesado, pero de lo que no pude formarme en su día. Compaginar el trabajo con estudiar está siendo todo un reto, pero lo importante es no dejarse vencer <br>
+                Por ahora mi historia aún esta por escribirse.
+            </p>
         </section>
 
         <footer>
