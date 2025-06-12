@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+ @font-face {
+    font-family: "UnZialish";
+    src: url("fuente/montaraz_2/UnZialish.woff2") format("woff2");
+ }
+html {
+  scroll-behavior: smooth;
+}
+
+a{
+    text-decoration: none;
+}
+
+a,h1,h2,h3 {
+    text-transform: uppercase;
+    font-family: var("UnZialish");
+}
+
+main {
+    background-image: url(images/MODO_CLARO.png);
+    image-rendering: optimizeQuality;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    max-width: 100%;
+}
+
+ header, footer, nav {
+    background-image: url(images/textura_cuero_verde.jpg);
+    image-rendering: optimizeQuality;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    max-width: none;
+}
+
+.footer {
+    display: flex;
+    justify-items: stretch;
+}
+
+.redes_sociales {
+    
+}
