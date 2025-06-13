@@ -1,9 +1,12 @@
-* {
+*{
   margin: 0;
   padding: 0;
   list-style: none;
+  box-sizing: border-box;
+
 }
- @font-face {
+ 
+@font-face {
     font-family: "UnZialish";
     src: url("fuente/montaraz_2/UnZialish.woff2") format("woff2");
  }
@@ -17,7 +20,29 @@ a{
 
 a,h1,h2,h3 {
     text-transform: uppercase;
-    font-family: var("UnZialish");
+    font-family: "UnZialish", serif;
+}
+
+.imagen_header img{
+    width: 25%;
+    align-items: center;
+    margin-left: 35%;
+}
+
+nav{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+.proyect_grid {
+    display: grid;
+    width: 20%;
+
+}
+
+.imagen_proyectos img{
+    width:30%;
+    align-items: center;
 }
 
 main {
@@ -38,11 +63,11 @@ main {
     max-width: none;
 }
 
-.footer {
-    display: flex;
-    justify-items: stretch;
-}
 
-.redes_sociales {
-    
+
+.logo {
+    width:10%;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 15%;
 }
