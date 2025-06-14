@@ -79,7 +79,8 @@ header{
 }
 
 .imagen_pixelart {
-    text-align: right;
+    flex: 0 0 auto;
+    order: 2;
 }
 
 .imagen_pixelart img{
@@ -90,11 +91,28 @@ header{
     object-fit: cover;
 }
 
-#sobre mi, p{
-    text-align: left;
-    text-shadow: 2px 2px 4px gray;
+#sobre mi {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    padding: 2rem;
 }
 
+.texto_sobremi {
+    flex: 1; /* Ocupa el espacio restante */
+    order: 1; /* Se queda al lado izquierdo */
+}
+
+.texto_sobremi h1 {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.texto_sobremi p {
+    text-align: left;
+    text-shadow: 2px 2px 4px gray;
+    line-height: 1.6;
+}
 nav{ 
     background-image: url(images/textura_cuero_verde.jpg);
     background-size: cover;
