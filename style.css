@@ -378,6 +378,16 @@ footer {
     opacity: 1;
 }
 
+.redes_sociales{
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background-color: rgba(14, 86, 20, 0.8);
+    border-radius: 10px;
+    border: 2px solid var(--dorado);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+
 .logo {
     max-width: 100px;
     text-align: center;
