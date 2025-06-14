@@ -121,21 +121,18 @@
         </section>
     </main>
         <footer>
-            <section class="tablon">
-                <h2>Tienes mi atencion</h2>
-                <div class="pergamino">
-                    <form class="message_form">
-                        <input type="text" placeholder="¿Cuál es tu nombre?">
-                        <textarea placeholder="Comparte lo que desees"></textarea>
-                        <button type="submit">Enviar pergamino</button>
-                    </form>
-                
-                 <div class="mensajes_grabados">
-                 </div>
-                </div>
-            
-            </section>
-             
+     
+    <section id="tablon">
+    <h2>Tienes mi atencion</h2>
+    <div class="tablon-controles">
+        <input type="text" id="autor-nota" placeholder="Tu nombre de aventurero..." maxlength="20">
+        <textarea id="texto-nota" placeholder="Escribe tu mensaje..." maxlength="150"></textarea>
+        <button id="agregar-nota">📜 Clavar Pergamino</button>
+    </div>
+    <div id="tablon-notas" class="tablon-container">
+        <!-- Aquí aparecerán las notas dinámicamente -->
+    </div>
+
             <section>
              <h2>contacto</h2>
              <div class="redes_sociales">
@@ -168,5 +165,177 @@ boton.addEventListener('click', () => {
 
 musica.volume = 0.3; // Volumen suave
 </script>
+
+<script>
+// TABLÓN DE PERGAMINOS INTERACTIVO
+class Tablon {
+    constructor() {
+        this.notas = JSON.parse(localStorage.getItem('tablon-notas')) || [];
+        this.init();
+    }
+
+    init() {
+        // Referencias a elementos
+        this.autorInput = document.getElementById('autor-nota');
+        this.textoTextarea = document.getElementById('texto-nota');
+        this.agregarBtn = document.getElementById('agregar-nota');
+        this.tablonContainer = document.getElementById('tablon-notas');
+
+        // Event listeners
+        this.agregarBtn.addEventListener('click', () => this.agregarNota());
+        
+        // Enter para agregar nota
+        this.textoTextarea.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter' && e.ctrlKey) {
+                this.agregarNota();
+            }
+        });
+
+        // Cargar notas existentes
+        this.mostrarNotas();
+    }
+
+    agregarNota() {
+        const autor = this.autorInput.value.trim();
+        const texto = this.textoTextarea.value.trim();
+
+        // Validaciones
+        if (!autor) {
+            alert('¡Escribe tu nombre, aventurero!');
+            this.autorInput.focus();
+            return;
+        }
+
+        if (!texto) {
+            alert('¡No puedes clavar un pergamino vacío!');
+            this.textoTextarea.focus();
+            return;
+        }
+
+        // Crear nueva nota
+        const nuevaNota = {
+            id: Date.now(),
+            autor: autor,
+            texto: texto,
+            fecha: new Date().toLocaleDateString('es-ES'),
+            posicion: this.generarPosicionAleatoria(),
+            rotacion: this.generarRotacionAleatoria(),
+            color: this.generarColorAleatorio()
+        };
+
+        // Añadir a array y guardar
+        this.notas.push(nuevaNota);
+        this.guardarNotas();
+
+        // Mostrar nueva nota con animación
+        this.mostrarNotaNueva(nuevaNota);
+
+        // Limpiar formulario
+        this.limpiarFormulario();
+    }
+
+    generarPosicionAleatoria() {
+        return {
+            top: Math.random() * 300 + 20 + 'px',
+            left: Math.random() * 70 + 10 + '%'
+        };
+    }
+
+    generarRotacionAleatoria() {
+        return (Math.random() - 0.5) * 20; // Entre -10 y 10 grados
+    }
+
+    generarColorAleatorio() {
+        const colores = ['#F4E4BC', '#F5DEB3', '#FAEBD7', '#F0E68C', '#DEB887'];
+        return colores[Math.floor(Math.random() * colores.length)];
+    }
+
+    mostrarNotas() {
+        this.tablonContainer.innerHTML = '';
+        this.notas.forEach(nota => this.crearElementoNota(nota));
+    }
+
+    mostrarNotaNueva(nota) {
+        const elemento = this.crearElementoNota(nota);
+        elemento.style.transform = `scale(0) rotate(${nota.rotacion}deg)`;
+        elemento.style.transition = 'transform 0.5s ease-out';
+        
+        setTimeout(() => {
+            elemento.style.transform = `scale(1) rotate(${nota.rotacion}deg)`;
+        }, 100);
+    }
+
+    crearElementoNota(nota) {
+        const elemento = document.createElement('div');
+        elemento.className = 'nota-pergamino';
+        elemento.style.top = nota.posicion.top;
+        elemento.style.left = nota.posicion.left;
+        elemento.style.transform = `rotate(${nota.rotacion}deg)`;
+        elemento.style.backgroundColor = nota.color;
+
+        elemento.innerHTML = `
+            <div class="nota-contenido">
+                <div class="nota-texto">${nota.texto}</div>
+                <div class="nota-firma">- ${nota.autor}</div>
+                <div class="nota-fecha">${nota.fecha}</div>
+            </div>
+            <div class="nota-eliminar" title="Quitar pergamino">❌</div>
+        `;
+
+        // Event listener para eliminar
+        elemento.querySelector('.nota-eliminar').addEventListener('click', (e) => {
+            e.stopPropagation();
+            this.eliminarNota(nota.id, elemento);
+        });
+
+        // Efecto hover
+        elemento.addEventListener('mouseenter', () => {
+            elemento.style.zIndex = '1000';
+            elemento.style.transform = `scale(1.05) rotate(0deg)`;
+        });
+
+        elemento.addEventListener('mouseleave', () => {
+            elemento.style.zIndex = '10';
+            elemento.style.transform = `scale(1) rotate(${nota.rotacion}deg)`;
+        });
+
+        this.tablonContainer.appendChild(elemento);
+        return elemento;
+    }
+
+    eliminarNota(id, elemento) {
+        // Animación de salida
+        elemento.style.transform = 'scale(0) rotate(180deg)';
+        elemento.style.transition = 'transform 0.3s ease-in';
+
+        setTimeout(() => {
+            // Eliminar del array
+            this.notas = this.notas.filter(nota => nota.id !== id);
+            this.guardarNotas();
+            
+            // Eliminar del DOM
+            if (elemento.parentNode) {
+                elemento.parentNode.removeChild(elemento);
+            }
+        }, 300);
+    }
+
+    guardarNotas() {
+        localStorage.setItem('tablon-notas', JSON.stringify(this.notas));
+    }
+
+    limpiarFormulario() {
+        this.autorInput.value = '';
+        this.textoTextarea.value = '';
+        this.autorInput.focus();
+    }
+}
+
+// Inicializar el tablón cuando la página cargue
+document.addEventListener('DOMContentLoaded', () => {
+    new Tablon();
+});
+</script>
+
 </body>
 </html>

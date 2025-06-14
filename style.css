@@ -240,6 +240,26 @@ footer {
     border-top: 3px solid var(--dorado);
 }
 
+.tablon-container {
+    position: relative;
+    min-height: 400px;
+    background: url('images/tablon-madera.jpg');
+    border: 3px solid var(--dorado);
+    border-radius: 10px;
+}
+
+.nota-pergamino {
+    position: absolute;
+    width: 200px;
+    background: #F4E4BC;
+    border: 2px solid #8B4513;
+    border-radius: 5px;
+    padding: 15px;
+    transform: rotate(-2deg);
+    box-shadow: 3px 3px 8px rgba(0,0,0,0.3);
+    cursor: pointer;
+}
+
 #toggle-musica {
     font-family: var(--fuente-principal);
     background: linear-gradient(45deg, var(--marron), #A0522D);
@@ -250,6 +270,94 @@ footer {
     cursor: pointer;
     font-size: 1rem;
     transition: all 0.3s ease;
+}
+
+/* ESTILOS ADICIONALES PARA EL TABLÓN */
+.tablon-controles {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tablon-controles input,
+.tablon-controles textarea {
+    padding: 0.8rem;
+    border: 2px solid var(--dorado);
+    border-radius: 5px;
+    background-color: var(--pergamino);
+    color: var(--marron);
+    font-family: var(--fuente-secundaria);
+}
+
+.tablon-controles button {
+    padding: 1rem;
+    background: linear-gradient(45deg, var(--marron), #A0522D);
+    color: var(--dorado);
+    border: 2px solid var(--dorado);
+    border-radius: 5px;
+    font-family: var(--fuente-principal);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.tablon-controles button:hover {
+    background: linear-gradient(45deg, #A0522D, var(--marron));
+    transform: scale(1.05);
+}
+
+.nota-pergamino {
+    transition: all 0.3s ease;
+    font-family: var(--fuente-secundaria);
+    font-size: 0.9rem;
+}
+
+.nota-contenido {
+    position: relative;
+}
+
+.nota-texto {
+    color: var(--marron);
+    margin-bottom: 0.5rem;
+    word-wrap: break-word;
+}
+
+.nota-firma {
+    font-weight: bold;
+    color: var(--marron);
+    font-size: 0.8rem;
+    text-align: right;
+}
+
+.nota-fecha {
+    font-size: 0.7rem;
+    color: #666;
+    text-align: right;
+    margin-top: 0.3rem;
+}
+
+.nota-eliminar {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: rgba(255, 0, 0, 0.8);
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.nota-pergamino:hover .nota-eliminar {
+    opacity: 1;
 }
 
 .logo {
