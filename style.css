@@ -148,12 +148,12 @@ header{
     box-shadow: 2px 2px 4px rgb(2, 40, 5);
     background-image: url(images/textura_cuero_verde.jpg); 
     background-size: cover;
-    z-index: 100;
+    z-index: 1000;
    }
 
-   .lista_nav.menu_desplegado {
+   /*.lista_nav.menu_desplegado {
     display: flex;
-   }
+   }*/
 
 }
 
