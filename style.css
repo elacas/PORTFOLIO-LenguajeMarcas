@@ -145,13 +145,15 @@ header{
     /*background-image: url(images/textura_cuero_verde.jpg); 
     background-size: cover;*/
     z-index: 100;
-
-    .lista_nav.menu_desplegado{
-        display:flex
-    }
    }
 
-   
+    .lista_nav.menu_desplegado{
+        display:flex !important;
+    }
+
+    nav {
+        position: relative;
+    }
 }
 
 @media (max-width: 768px) {  

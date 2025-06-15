@@ -21,8 +21,8 @@
     
       <nav id="menu">
         
-       <ul class="lista_nav" >
-            <li><a href="#sobre_mi">sobre mí</a></li>
+       <ul  class="lista_nav" >
+            <li ><a href="#sobre_mi">sobre mí</a></li>
             <li><a href="#proyectos">projectos</a></li>
             <li><a href="#hobbits">hobbits</a></li>
             <li><a href="#cv">sendero andado</a></li>
@@ -172,8 +172,25 @@ boton.addEventListener('click', () => {
         boton.textContent = '🎵 Música de Taberna';
     }
 });
-
 musica.volume = 0.3; // Volumen suave
+</script>
+<script>
+    let lanzador = "#enlace_menu";
+let desplegable = "#menu";
+let despliegaClase = "menu_desplegado"
+
+function nav(){
+let lanz = document.querySelector(lanzador);
+lanz.addEventListener("click",despliegaMenu);
+
+}
+
+function despliegaMenu(){
+    let despl = document.querySelector(desplegable);
+    despl.classList.toggle(despliegaClase)
+}
+
+nav();
 </script>
 </body>
 </html>
