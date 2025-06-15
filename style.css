@@ -143,12 +143,12 @@ header{
     }
 
     .project_card, .hobbits_card {
-        min-height: 350px;
-        padding: 1rem;
+        min-height: 250px;
+        padding: 1rem auto;
     }
 
     .project_card img, .hobbits_card img {
-        height: 180px; 
+        height: 150px; 
         max-width: 100%;
     }
 }
