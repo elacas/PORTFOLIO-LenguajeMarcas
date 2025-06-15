@@ -115,13 +115,55 @@ header{
     line-height: 1.6;
 }
 
-@media (max-width: 768px) {
-    #sobre_mi {
+.boton_menu {
+    display: none; /* Oculto por defecto */
+    font-size: 28px;
+    color: var(--dorado);
+    border: 2px var(--dorado);
+    background: var(--marron);
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3 ease;
+    padding: 0.5rem;
+}
+
+.boton_menu:hover{
+    transform: scale(1.1)
+}
+
+@media screen and (max-width: 787px) {
+     .boton_menu {
+    display: block;
+   }
+   
+   .lista_nav{
+    display: none;
+    flex-direction: column;
+    gap: 12px;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left:0;
+    padding: 15px 20px;
+    box-shadow: 2px 2px 4px rgb(2, 40, 5);
+    background-image: url(images/textura_cuero_verde.jpg); 
+    background-size: cover;
+    z-index: 100;
+   }
+
+   .lista_nav.menu_desplegado {
+    display: flex;
+   }
+
+}
+
+@media (max-width: 768px) {  
+  
+  #sobre_mi {
         display: flex;
         flex-direction: column;
         justify-content: center;
     }
-    
     .imagen_pixelart {
         order: 1;
     }
@@ -159,7 +201,10 @@ header{
 
 
     .project_grid, .hobbits_grid {
-        grid-template-columns: 1fr; 
+        /*grid-template-columns: 1fr; */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         padding: 1rem;
         gap: 1rem;
         min-height: 60vh;
@@ -168,17 +213,17 @@ header{
     .project_card, .hobbits_card {
         min-height: 250px;
         padding: 1rem;
-        align-items: center;
+
     }
 
     .project_card img, .hobbits_card img {
-        width: 300px;
-        height: 300px; 
+        width: 250px;
+        height: 250px; 
         max-width: 100%;
     }
 }
 
-@media (max-width: 1024px) and (min-width: 769px) {
+@media (max-width: 1024px) {
     #sobre_mi {
         gap: 2rem;
     }
@@ -206,9 +251,10 @@ nav{
     background-repeat: no-repeat;
     align-items: center;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     padding: 1rem 2rem;
     gap: 2rem;
+    position: relative;
 }
 
 nav ul {
