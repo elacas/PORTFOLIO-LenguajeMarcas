@@ -171,7 +171,8 @@ header{
     }
 
     .project_card img, .hobbits_card img {
-        height: 200px; 
+        width: 300px;
+        height: 300px; 
         max-width: 100%;
     }
 }
