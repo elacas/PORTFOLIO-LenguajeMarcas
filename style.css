@@ -76,6 +76,7 @@ header{
     background-repeat: no-repeat;
     padding: 1rem 0 ;
     border-bottom: 3px solid var(--dorado);
+    position: relative;
 }
 
 #sobre_mi {
@@ -126,15 +127,11 @@ header{
     padding: 0.5rem;
 }
 
-.boton_menu:hover{
-    transform: scale(1.1)
-}
-
 @media screen and (max-width: 787px) {
      .boton_menu {
     display: block;
    }
-   
+
    .lista_nav{
     display: none;
     flex-direction: column;
@@ -145,15 +142,16 @@ header{
     left:0;
     padding: 15px 20px;
     box-shadow: 2px 2px 4px rgb(2, 40, 5);
-    background-image: url(images/textura_cuero_verde.jpg); 
-    background-size: cover;
-    z-index: 1000;
+    /*background-image: url(images/textura_cuero_verde.jpg); 
+    background-size: cover;*/
+    z-index: 100;
+
+    .lista_nav.menu_desplegado{
+        display:flex
+    }
    }
 
-   /*.lista_nav.menu_desplegado {
-    display: flex;
-   }*/
-
+   
 }
 
 @media (max-width: 768px) {  
