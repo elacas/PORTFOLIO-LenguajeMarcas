@@ -117,14 +117,15 @@ header{
 
 @media (max-width: 576px) {
   header {
-    padding: auto;
+    padding: 7px;
      display: flex;
     align-items:center;
     justify-content:center;
-    padding: auto;
   }
   .imagen_pixelart {
-    align-items: flex-start;
+    display: flexbox;
+    align-items: center;
+    text-align: start;
   }
 }
 
