@@ -115,7 +115,7 @@ header{
     line-height: 1.6;
 }
 
-@media (max-width: 450px) {
+/*@media (max-width: 450px) {
   header {
     float: none;
   }
@@ -145,7 +145,7 @@ header{
   text-align: center;
   margin-right: 35%;
 }
-}
+}*/
 @media (max-width: 992px) {
   .proyect-grid {
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
