@@ -118,9 +118,8 @@ header{
 .boton_menu {
     display: none; /* Oculto por defecto */
     font-size: 28px;
-    color: var(--dorado);
+    color: var(--marron);
     border: 2px var(--dorado);
-    background: var(--marron);
     text-decoration: none;
     cursor: pointer;
     transition: all 0.3 ease;
