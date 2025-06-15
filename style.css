@@ -117,7 +117,7 @@ header{
 
 
 /* 📱 RESPONSIVE: MÓVILES */
-@media (max-width: 768px) {
+@media (max-width: 650px) {
     #sobre_mi {
         flex-direction: column; /* Una columna */
         align-items: center; /* Centrar todo */
@@ -137,16 +137,12 @@ header{
         height: 225px;
     }
 
-    .proyect-grid {
-    grid-template-columns: repeat(auto-fill, minmax(650px, 1fr));
-    text-align: center;
-    justify-content: left;
-  }
+    .project-grid {
+    grid-template-columns: repeat(auto-fill, minmax(450px,1fr));
+    }
 
-  
-  
   .hobbits_grid {
-    grid-template-columns: repeat(auto-fill, minmax(650px,1fr));
+    grid-template-columns: repeat(auto-fill, minmax(450px,1fr));
   }
 }
 
@@ -163,8 +159,6 @@ header{
 
     .proyect-grid {
     grid-template-columns: repeat(auto-fill, minmax(650px, 1fr));
-    text-align: center;
-    justify-content: left;
   }
   
   .hobbits_grid {
@@ -247,14 +241,14 @@ section {
     border: 2px solid var(--dorado);
     text-align: center;
     transition: transform 0.3s ease;
-    min-height: 650px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    margin-right: auto;
 }
 
 .project_card img{
-    width: 80%;
+    width: 100%;
     max-width: 350px;
     height: 350px;
     object-fit: cover;
