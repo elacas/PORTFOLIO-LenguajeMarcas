@@ -78,12 +78,20 @@ header{
     border-bottom: 3px solid var(--dorado);
 }
 
-.imagen_pixelart {
-    flex: 0 0 auto;
-    order: 2;
+#sobre_mi {
+    display: flex;
+    align-items: flex-start; /* Alinear arriba */
+    gap: 3rem;
+    padding: 2rem;
 }
 
-.imagen_pixelart img{
+
+.imagen_pixelart {
+    flex: 0 0 auto; 
+    order: 2; 
+}
+
+.imagen_pixelart img {
     width: 200px;
     height: 300px;
     border-radius: 30%;
@@ -91,16 +99,10 @@ header{
     object-fit: cover;
 }
 
-#sobre mi {
-    display: flex;
-    align-items: center;
-    gap: 3rem;
-    padding: 2rem;
-}
-
+/* TEXTO (lado izquierdo) */
 .texto_sobremi {
-    flex: 1; /* Ocupa el espacio restante */
-    order: 1; /* Se queda al lado izquierdo */
+    flex: 1; 
+    order: 1; 
 }
 
 .texto_sobremi h1 {
@@ -110,9 +112,29 @@ header{
 
 .texto_sobremi p {
     text-align: left;
-    text-shadow: 2px 2px 4px gray;
     line-height: 1.6;
 }
+
+@media (max-width: 576px) {
+  header {
+    padding: 2px 0;
+     display: flex;
+    align-items:center;
+    justify-content:center;
+    padding: 2px;
+  }
+}
+
+@media (max-width: 992px) {
+  .characters-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+  
+  .lista_navegador {
+    font-size: 1 rem;
+  }
+}
+
 nav{ 
     background-image: url(images/textura_cuero_verde.jpg);
     background-size: cover;
