@@ -115,7 +115,7 @@ header{
     line-height: 1.6;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 600px) {
   header {
     padding: 7px;
      display: flex;
