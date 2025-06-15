@@ -117,23 +117,31 @@ header{
 
 @media (max-width: 600px) {
   header {
-    padding: 7px;
-     display: flex;
-    align-items:center;
-    justify-content:center;
+    float: none;
   }
   .imagen_pixelart {
-    display: flexbox;
-    align-items: center;
-    text-align: start;
+    float: left;
+  }
+    .proyect-grid {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 0.4fr));
+  }
+  
+  .hobbits_grid {
+    grid-template-columns: repeat(auto-fill, minmax(100px,1fr));
+  }
+  .lista_navegador {
+    font-size: 1 rem;
   }
 }
 
 @media (max-width: 992px) {
-  .characters-grid {
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  .proyect-grid {
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   }
   
+  .hobbits_grid {
+    grid-template-columns: repeat(auto-fill, minmax(350px,1fr));
+  }
   .lista_navegador {
     font-size: 1 rem;
   }
