@@ -117,10 +117,10 @@ header{
 
 @media (max-width: 768px) {
     #sobre_mi {
+       min-height: 80vh; 
+        display: flex;
         flex-direction: column;
-        align-items: center;
-        text-align: center;
-        gap: 2rem;
+        justify-content: center;
     }
     
     .imagen_pixelart {
@@ -136,15 +136,36 @@ header{
         height: 225px;
     }
 
+     main {
+        padding: 0.5rem; 
+        max-width: none;
+    }
+
+    section {
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+        min-height: 70vh; 
+        width: calc(100vw - 2rem); /
+        /*margin-right: 1rem;
+        margin-left: 1rem;*/
+    }
+
+    main {
+        padding: 0.5rem; 
+        max-width: none;
+    }
+
+
     .project_grid, .hobbits_grid {
         grid-template-columns: 1fr; 
         padding: 1rem;
-        gap: 1.5rem;
+        gap: 1rem;
+        min-height: 60vh;
     }
 
     .project_card, .hobbits_card {
-        min-height: 250px;
-        padding: 1rem auto;
+        min-height: 200px;
+        padding: 1rem;
     }
 
     .project_card img, .hobbits_card img {
@@ -224,6 +245,7 @@ main{
     padding: 2rem;
     max-width: 1200px;
     margin: 0 auto;
+    width: 100%;
 }
 
 section {
@@ -233,6 +255,9 @@ section {
     border-radius: 10px;
     border: 2px solid var(--dorado);
     box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    min-height: 60vh;
+    width: 100%;
+
 }
 
 .project_grid {
