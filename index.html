@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,15 +19,15 @@
     <header> 
       <a href="#" id="enlace_menu" class="boton_menu" >&#9776;</a> 
     
-      <nav id="menu">
+      <nav>
         
-       <ul  class="lista_nav" >
+       <ul id="menu" class="lista_nav">
             <li ><a href="#sobre_mi">sobre mí</a></li>
             <li><a href="#proyectos">projectos</a></li>
             <li><a href="#hobbits">hobbits</a></li>
             <li><a href="#cv">sendero andado</a></li>
        </ul>
-        <audio id="musica-fondo" loop>
+        <audio id="musica-fondo"  loop>
              <source src="sonido/medieval-citytavern-ambient-235876.mp3" type="audio/mpeg">
              <source src="sonido/medieval-citytavern-ambient-235876.mp3" type="audio/mpeg">
              <source src="sonido/midnight-forest-184304.mp3" type="audio/mpeg">
@@ -174,23 +174,6 @@ boton.addEventListener('click', () => {
 });
 musica.volume = 0.3; // Volumen suave
 </script>
-<script>
-    let lanzador = "#enlace_menu";
-let desplegable = "#menu";
-let despliegaClase = "menu_desplegado"
 
-function nav(){
-let lanz = document.querySelector(lanzador);
-lanz.addEventListener("click",despliegaMenu);
-
-}
-
-function despliegaMenu(){
-    let despl = document.querySelector(desplegable);
-    despl.classList.toggle(despliegaClase)
-}
-
-nav();
-</script>
 </body>
 </html>

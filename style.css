@@ -119,11 +119,11 @@ header{
 .boton_menu {
     display: none; /* Oculto por defecto */
     font-size: 28px;
-    color: var(--marron);
+    color: solid var(--marron);
     border: 2px var(--dorado);
     text-decoration: none;
     cursor: pointer;
-    transition: all 0.3 ease;
+    transition: all 0.3s ease;
     padding: 0.5rem;
 }
 
@@ -142,8 +142,8 @@ header{
     left:0;
     padding: 15px 20px;
     box-shadow: 2px 2px 4px rgb(2, 40, 5);
-    /*background-image: url(images/textura_cuero_verde.jpg); 
-    background-size: cover;*/
+    background-image: url(images/textura_cuero_verde.jpg); 
+    background-size: cover;
     z-index: 100;
    }
 
@@ -200,7 +200,7 @@ header{
 
 
     .project_grid, .hobbits_grid {
-        /*grid-template-columns: 1fr; */
+        grid-template-columns: 1fr; 
         display: flex;
         flex-direction: column;
         justify-content: center;
