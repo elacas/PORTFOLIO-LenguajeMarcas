@@ -116,16 +116,59 @@ header{
 }
 
 
-@media (max-width: 992px) {
-  .proyect-grid {
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+/* 📱 RESPONSIVE: MÓVILES */
+@media (max-width: 768px) {
+    #sobre_mi {
+        flex-direction: column; /* Una columna */
+        align-items: center; /* Centrar todo */
+        text-align: center;
+    }
+    
+    .imagen_pixelart {
+        order: 1; /* Imagen ARRIBA */
+    }
+    
+    .texto_sobremi {
+        order: 2; /* Texto ABAJO */
+    }
+    
+    .imagen_pixelart img {
+        width: 150px; /* Más pequeña en móvil */
+        height: 225px;
+    }
+
+    .proyect-grid {
+    grid-template-columns: repeat(auto-fill, minmax(650px, 1fr));
+    text-align: center;
+    justify-content: left;
+  }
+
+  
+  
+  .hobbits_grid {
+    grid-template-columns: repeat(auto-fill, minmax(650px,1fr));
+  }
+}
+
+/* 📱 RESPONSIVE: TABLETS */
+@media (max-width: 1024px) and (min-width: 769px) {
+    #sobre_mi {
+        gap: 2rem; /* Menos espacio */
+    }
+    
+    .imagen_pixelart img {
+        width: 180px;
+        height: 270px;
+    }
+
+    .proyect-grid {
+    grid-template-columns: repeat(auto-fill, minmax(650px, 1fr));
+    text-align: center;
+    justify-content: left;
   }
   
   .hobbits_grid {
-    grid-template-columns: repeat(auto-fill, minmax(350px,1fr));
-  }
-  .lista_navegador {
-    font-size: 1 rem;
+    grid-template-columns: repeat(auto-fill, minmax(650px,1fr));
   }
 }
 
@@ -204,16 +247,21 @@ section {
     border: 2px solid var(--dorado);
     text-align: center;
     transition: transform 0.3s ease;
+    min-height: 650px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .project_card img{
-    width: 100%;
-    max-width: 450px;
+    width: 80%;
+    max-width: 350px;
     height: 350px;
     object-fit: cover;
     border-radius: 5px;
-    margin-bottom: 1rem;
+    margin-bottom: 0 1rem auto;
     border: 2px solid var(--marron);
+    padding: 0 auto;
 }
 
 .project_card h3{
