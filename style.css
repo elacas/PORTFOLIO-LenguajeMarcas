@@ -117,7 +117,6 @@ header{
 
 @media (max-width: 768px) {
     #sobre_mi {
-       min-height: 80vh; 
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -132,8 +131,8 @@ header{
     }
     
     .imagen_pixelart img {
-        width: 150px;
-        height: 225px;
+        width: 250px;
+        height: 300px;
     }
 
      main {
@@ -167,12 +166,12 @@ header{
     }
 
     .project_card, .hobbits_card {
-        min-height: 200px;
+        min-height: 250px;
         padding: 1rem;
     }
 
     .project_card img, .hobbits_card img {
-        height: 150px; 
+        height: 200px; 
         max-width: 100%;
     }
 }
