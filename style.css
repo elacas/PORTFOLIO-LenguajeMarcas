@@ -115,55 +115,63 @@ header{
     line-height: 1.6;
 }
 
-
-/* 📱 RESPONSIVE: MÓVILES */
-@media (max-width: 650px) {
+@media (max-width: 768px) {
     #sobre_mi {
-        flex-direction: column; /* Una columna */
-        align-items: center; /* Centrar todo */
+        flex-direction: column;
+        align-items: center;
         text-align: center;
+        gap: 2rem;
     }
     
     .imagen_pixelart {
-        order: 1; /* Imagen ARRIBA */
+        order: 1;
     }
     
     .texto_sobremi {
-        order: 2; /* Texto ABAJO */
+        order: 2;
     }
     
     .imagen_pixelart img {
-        width: 150px; /* Más pequeña en móvil */
+        width: 150px;
         height: 225px;
     }
 
-    .project-grid {
-    grid-template-columns: repeat(auto-fill, minmax(450px,1fr));
+    .project_grid, .hobbits_grid {
+        grid-template-columns: 1fr; 
+        padding: 1rem;
+        gap: 1.5rem;
     }
 
-  .hobbits_grid {
-    grid-template-columns: repeat(auto-fill, minmax(450px,1fr));
-  }
+    .project_card, .hobbits_card {
+        min-height: 350px;
+        padding: 1rem;
+    }
+
+    .project_card img, .hobbits_card img {
+        height: 180px; 
+        max-width: 100%;
+    }
 }
 
-/* 📱 RESPONSIVE: TABLETS */
 @media (max-width: 1024px) and (min-width: 769px) {
     #sobre_mi {
-        gap: 2rem; /* Menos espacio */
+        gap: 2rem;
     }
     
     .imagen_pixelart img {
-        width: 250px;
-        height: 350px;
+        width: 180px;
+        height: 270px;
     }
 
-    .proyect-grid {
-    grid-template-columns: repeat(auto-fill, minmax(650px, 1fr));
-  }
-  
-  .hobbits_grid {
-    grid-template-columns: repeat(auto-fill, minmax(650px,1fr));
-  }
+    /* GRIDS EN TABLET */
+    .project_grid, .hobbits_grid {
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 1.5rem;
+    }
+
+    .project_card img, .hobbits_card img {
+        height: 220px;
+    }
 }
 
 nav{ 
@@ -229,11 +237,12 @@ section {
 
 .project_grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 20px;
     padding: 2rem;
 
 }
+
 .project_card {
     background-color: rgba(245, 230, 211, 0.9);
     padding: 1.5rem;
@@ -243,30 +252,29 @@ section {
     transition: transform 0.3s ease;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    margin-right: auto;
+    min-height: 400px;
 }
 
 .project_card img{
     width: 100%;
-    max-width: 350px;
-    height: 350px;
+    max-width: 100%;
+    height: 200px;
     object-fit: cover;
     border-radius: 5px;
-    margin-bottom: 0 1rem auto;
+    margin: 0 auto 1rem auto;
     border: 2px solid var(--marron);
-    padding: 0 auto;
 }
 
 .project_card h3{
     color: var(--marron);
     margin-bottom: 1rem;
-   
+    flex-grow: 0;
 }
 
 .project_card p {
     color: var(--marron);
     font-size: 0.9rem;
+    flex-grow: 1;
 }
 
 .hobbits_grid {
@@ -283,27 +291,31 @@ section {
     border: 2px solid var(--dorado);
     text-align: center;
     transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    min-height: 400px;
 }
 
 .hobbits_card img{
     width: 100%;
-    max-width: 450px;
-    height: 350px;
+    max-width:100%;
+    height: 220px;
     object-fit: cover;
     border-radius: 5px;
-    margin-bottom: 1rem;
+    margin-bottom: 0 auto 1rem auto;
     border: 2px solid var(--marron);
-
 }
 
 .hobbits_card h3{
     color: var(--marron);
     margin-bottom: 1rem;
+    flex-grow: 0;
 }
 
 .hobbits_card p{
     color: var(--marron);
     font-size: 0.9rem;
+    flex-grow: 1;
 }
 
 footer {
