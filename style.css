@@ -168,6 +168,7 @@ header{
     .project_card, .hobbits_card {
         min-height: 250px;
         padding: 1rem;
+        align-items: center;
     }
 
     .project_card img, .hobbits_card img {
