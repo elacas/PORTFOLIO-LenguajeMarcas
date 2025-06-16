@@ -127,6 +127,9 @@ header{
     padding: 0.5rem;
 }
 
+.boton_menu:hover{
+    transform: scale(1.1);
+}
 @media screen and (max-width: 787px) {
      .boton_menu {
     display: block;
