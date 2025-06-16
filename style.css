@@ -109,7 +109,7 @@ p{
 }
 
 header{
-    background-image: url(images/textura_cuero_verde.jpg);
+    background-image: url(images/textura_cuero_verde.avif);
     image-rendering: optimizeQuality;
     background-size: cover;
     background-position: center;
@@ -194,7 +194,7 @@ header{
     left:0;
     padding: 15px 20px;
     box-shadow: 2px 2px 4px rgb(2, 40, 5);
-    background-image: url(images/textura_cuero_verde.jpg); 
+    background-image: url(images/textura_cuero_verde.avif); 
     background-size: cover;
     z-index: 1000;
    }
@@ -296,7 +296,7 @@ header{
 }
 
 nav{ 
-    background-image: url(images/textura_cuero_verde.jpg);
+    background-image: url(images/textura_cuero_verde.avif);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -333,7 +333,7 @@ nav a:hover {
 }
 
 body {
-    background-image: url(images/MODO_CLARO.png);
+    background-image: url(images/MODO_CLARO.avif);
     image-rendering: optimizeQuality;
     background-size: cover;
     background-position: center;
