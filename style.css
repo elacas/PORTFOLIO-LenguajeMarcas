@@ -90,6 +90,8 @@ header{
 .imagen_pixelart {
     flex: 0 0 auto; 
     order: 2; 
+   margin: 0 auto; /* ✅ AÑADIR - centra automáticamente */
+
 }
 
 .imagen_pixelart img {
@@ -114,17 +116,27 @@ header{
 .texto_sobremi p {
     text-align: left;
     line-height: 1.6;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+}
+
+.header_controls {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 }
 
 .boton_menu {
     display: none; /* Oculto por defecto */
     font-size: 28px;
-    color: var(--marron);
-    border: 2px var(--dorado);
+    color: var(--dorado);
+    border: solid 2px var(--dorado);
     text-decoration: none;
     cursor: pointer;
     transition: all 0.3s ease;
     padding: 0.5rem;
+    border-radius: 5px;
 }
 
 @media screen and (max-width: 787px) {
@@ -144,7 +156,7 @@ header{
     box-shadow: 2px 2px 4px rgb(2, 40, 5);
     background-image: url(images/textura_cuero_verde.jpg); 
     background-size: cover;
-    z-index: 100;
+    z-index: 1000;
    }
 
     .lista_nav.menu_desplegado{
