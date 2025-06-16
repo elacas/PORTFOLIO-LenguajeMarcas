@@ -33,18 +33,22 @@ html {
 .cookie_popup {
     position: fixed;
     bottom: 20px;
-    right: 20px;
-    left: 20px;
+    left: 50%;
+    transform: translateX(-50%);
     background-color: var(--marron);
     color: var(--dorado);
-    padding: 15px;
-    border-radius: 5px;
+    padding: 20px;
+    border-radius: 10px;
+    border: 3px solid var(--dorado);
     display: none;
     justify-content: space-between;
     align-items: center;
-    max-width: 500px;
-    margin: auto;
+    max-width: 600px;
+    width: 90%;
     z-index: 1000; 
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    backdrop-filter: blur (5px);
+    animation: slideUp 0.3s ease-out;
 }
 
 .cookie_popup.show{
@@ -589,4 +593,22 @@ footer {
     text-align: center;
     justify-items: center;
     margin-left: 13%;
+}
+
+.btn-volver {
+    display: inline-block;
+    background: var(--marron);
+    color: var(--dorado);
+    padding: 1rem 2rem;
+    border: 2px solid var(--dorado);
+    border-radius: 5px;
+    text-decoration: none;
+    font-family: var(--fuente-principal);
+    transition: all 0.3s ease;
+    margin-top: 2rem;
+}
+
+.btn-volver:hover {
+    background: var(--dorado);
+    color: var(--marron);
 }
