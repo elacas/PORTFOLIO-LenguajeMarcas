@@ -33,19 +33,18 @@ html {
 .cookie_popup {
     position: fixed;
     bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 20px;
+    right: 20px;
     background-color: var(--marron);
     color: var(--dorado);
     padding: 15px;
     border-radius: 5px;
-    border: 2px solid var(--dorado);
     display: none;
     justify-content: space-between;
     align-items: center;
-    max-width: 90%;
+    max-width: 500px;
     margin: auto;
-    z-index: 5000; 
+    z-index: 1000; 
 }
 
 .cookie_popup.show{
