@@ -119,7 +119,7 @@ header{
 .boton_menu {
     display: none; /* Oculto por defecto */
     font-size: 28px;
-    color: solid var(--marron);
+    color: var(--marron);
     border: 2px var(--dorado);
     text-decoration: none;
     cursor: pointer;
@@ -127,9 +127,6 @@ header{
     padding: 0.5rem;
 }
 
-.boton_menu:hover{
-    transform: scale(1.1);
-}
 @media screen and (max-width: 787px) {
      .boton_menu {
     display: block;
