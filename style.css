@@ -423,7 +423,7 @@ footer {
 
 #toggle-musica {
     font-family: var(--fuente-principal);
-    background: linear-gradient(45deg, var(--marron), #A0522D);
+    background: var(--marron);
     color: var(--dorado);
     border: 2px solid var(--dorado);
     padding: 0.5rem 1rem;
@@ -431,6 +431,11 @@ footer {
     cursor: pointer;
     font-size: 1rem;
     transition: all 0.3s ease;
+}
+
+#toggle-musica:hover {
+    border-color: var(--dorado);
+    background: #015606;
 }
 
 /* ESTILOS ADICIONALES PARA EL TABLÓN */
