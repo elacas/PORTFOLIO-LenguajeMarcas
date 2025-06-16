@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="página personal y de proyectos">
+    <meta name="google" content="translate">
+    <meta name="description" content="Página personal y de proyectos">
     <meta name="keyword" content="portfolio, desarrolladora, ASIR, proyectos web, frontend, aventura tecnológica, Elaine Castiñeira, ASIR, ThePower, Prometeo">
     <meta name="author" content="Elaine Castiñeira Martinez">
     <meta property="og:title" content="Inicio del camino">
-    <meta property="og:image" content="images/logo_web.png">
+    <meta property="og:image" content="images\library.avif">
     <meta property="og:description" content="página portfolio, muestra proyectos y cosas interesantes">
     <link rel="icon" href="images/logo_web.png">
     <link rel="stylesheet" href="style.css">
@@ -156,33 +157,37 @@
             
         </footer>
         
-<script src="menuhamburguesa.js"></script>
+    <script src="menuhamburguesa.js"></script>
 
-<!-- Firebase SDK -->
-<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
+     <!-- Firebase SDK -->
+     <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
 
-<!-- Tu tablón de pergaminos con Firebase -->
-<script src="tablon.js"></script>
+     <!-- Tu tablón de pergaminos con Firebase -->
+     <script src="tablon.js"></script>
 
+     <!-- Script de música (mantenemos como estaba) -->
+     <script>
+     const musica = document.getElementById('musica-fondo');
+     const boton = document.getElementById('toggle-musica');
 
-
-<!-- Script de música (mantenemos como estaba) -->
-<script>
-const musica = document.getElementById('musica-fondo');
-const boton = document.getElementById('toggle-musica');
-
-boton.addEventListener('click', () => {
-    if (musica.paused) {
+        boton.addEventListener('click', () => {
+      if (musica.paused) {
         musica.play();
         boton.textContent = '🔇 Silenciar Bardos';
-    } else {
+      } else {
         musica.pause();
         boton.textContent = '🎵 Música de Taberna';
-    }
-});
-musica.volume = 0.3; // Volumen suave
-</script>
+      }
+     });
+      musica.volume = 0.3; // Volumen suave
+   </script>
+
+   <div class="cookie_popup" id="cookiePopup">
+    <p>Este sitio utiliza cokies para mejorar tu experiencia<a href="#">Saber más</a></p>
+    <button id="acceptCookies">Aceptar</button>
+   </div>
+   <script src="popup.js"></script>
 
 </body>
 </html>

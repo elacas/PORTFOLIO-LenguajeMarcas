@@ -30,6 +30,42 @@ html {
     --fuente-secundaria: "aniron", serif;
 }
 
+.cookie_popup {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    background-color: var(--marron);
+    color: var(--dorado);
+    padding: 15px;
+    border-radius: 5px;
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 500px;
+    margin: auto;
+    z-index: 1000; 
+}
+
+.cookie_popup.show{
+    display: flex;
+
+}
+
+.cookie_popup button {
+    background-color: var(--marron);
+    color: var(--dorado);
+    border: 2px solid var(--dorado);
+    padding: 8px 14px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.cookie_popup a{
+    color:#015606;
+    text-decoration: underline;
+}
 
 a{
     text-decoration: none;
