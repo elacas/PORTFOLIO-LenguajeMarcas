@@ -445,7 +445,7 @@ section {
 }
 
 footer {
-    background-image: url(images/textura_cuero_verde.jpg);
+    background-image: url(images/textura_cuero_verde.avif);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -456,7 +456,7 @@ footer {
 .tablon-container {
     position: relative;
     min-height: 400px;
-    background: url('images/tablon-madera.jpg');
+    background: url('images/tablon-madera.avif');
     border: 3px solid var(--dorado);
     border-radius: 10px;
 }
