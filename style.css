@@ -47,7 +47,7 @@ html {
     width: 90%;
     z-index: 1000; 
     box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-    backdrop-filter: blur (5px);
+    backdrop-filter: blur(5px);
     animation: slideUp 0.3s ease-out;
 }
 
@@ -130,7 +130,7 @@ header{
 .imagen_pixelart {
     flex: 0 0 auto; 
     order: 2; 
-   margin: 0 auto; /* ✅ AÑADIR - centra automáticamente */
+   margin: 0 auto; /*- centra automáticamente */
 
 }
 
