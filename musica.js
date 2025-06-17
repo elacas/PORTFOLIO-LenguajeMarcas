@@ -1,4 +1,14 @@
-// ✅ MÚSICA CON REPRODUCCIÓN ALEATORIA
+let audioLoaded = false;
+
+boton.addEventListener('click', () => {
+    if (!audioLoaded) {
+        // ✅ CARGAR AUDIO SOLO AL PRIMER CLICK
+        const cancionAleatoria = seleccionarCancionAleatoria();
+        cargarCancion(cancionAleatoria);
+        audioLoaded = true;
+        }
+
+// MÚSICA CON REPRODUCCIÓN ALEATORIA
 const canciones = [
     "sonido/medieval-citytavern-ambient-235876.mp3",
     "sonido/midnight-forest-184304.mp3", 
@@ -50,5 +60,5 @@ musica.addEventListener('ended', () => {
         musica.play();
     }
 });
-
+});
 musica.volume = 0.3;
