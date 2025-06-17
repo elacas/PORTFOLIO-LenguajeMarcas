@@ -18,6 +18,18 @@
     font-display: swap;
  }
 
+  @font-face {
+    font-family: "Quidity";
+    src:url("fuente/elves_1/Quidity.woff2") format("woff2");
+    font-display: swap;
+ }
+
+ @font-face {
+    font-family: "yafit";
+    src:url("fuente/elves_1/Quidity.woff2") format("woff2");
+    font-display: swap;
+ }
+
 html {
   scroll-behavior: smooth;
 }
@@ -28,13 +40,33 @@ html {
     --pergamino: #F5DEB3;
     --fuente-principal: "UnZialish", serif;
     --fuente-secundaria: "aniron", serif;
+     --fondo-principal: url(images/MODO_CLARO.avif);
+    --fondo-header: url(images/textura_cuero_verde.avif);
+    --color-texto: #F5DEB3;
+    --color-titulos: #D4A574;
+    --fondo-secciones: rgba(139, 69, 19, 0.8);
+    --fondo-tablon: url('images/tablon-madera.avif');
+    --color-notas: #F4E4BC;
+    --borde-notas: #8B4513;
 }
 
 [data-theme="dark"] {
-    
+    --fondo-principal: url(images/MODO_OSCURO.avif); 
+    --fondo-header: url(images/estrellas.avif); 
+    --color-texto: #C0C0C0; 
+    --color-titulos: #8ca432; 
+    --fondo-secciones: rgba(44, 44, 44, 0.9);
     --fondo-tablon: url('images/tablon-piedra.avif'); 
     --color-notas: #2C2C2C; 
-    --borde-notas: #FFD700; 
+    --borde-notas: #8f8e8efa; 
+    --fuente-principal: "Quidity";
+    --fuente-secundaria: "yafit";
+    --plata: #8f8e8efa;
+    --azul:#3b23a5;
+    --dorado: #8ca432;
+    --marron: #2C2C2C;
+    --pergamino: #C0C0C0;
+
 }
 
 .cookie_popup {
@@ -95,7 +127,7 @@ h1 {
 }
 
 h2 {
-    color: #D4A574;
+    color: var(--color-titulos);
     font-size: 2rem;
     text-align: center;
     margin-bottom: 2rem;
@@ -107,7 +139,7 @@ h3 {
 }
 
 p{
-    color: #F5DEB3;
+    color: var(--color-texto);
     font-size: 1rem;
     font-family: var(--fuente-secundaria);
     text-shadow: 2px 2px 4px gray;
@@ -116,7 +148,7 @@ p{
 }
 
 header{
-    background-image: url(images/textura_cuero_verde.avif);
+    background-image: var(--fondo-header);
     image-rendering: optimizeQuality;
     background-size: cover;
     background-position: center;
@@ -202,7 +234,7 @@ header{
     left:0;
     padding: 15px 20px;
     box-shadow: 2px 2px 4px rgb(2, 40, 5);
-    background-image: url(images/textura_cuero_verde.avif); 
+    background-image: var(--fondo-header); 
     background-size: cover;
     z-index: 1000;
    }
@@ -305,7 +337,7 @@ header{
 }
 
 nav{ 
-    background-image: url(images/textura_cuero_verde.avif);
+    background-image: var(--fondo-header);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -342,7 +374,7 @@ nav a:hover {
 }
 
 body {
-    background-image: url(images/MODO_CLARO.avif);
+    background-image: var(--fondo-principal);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -360,7 +392,7 @@ main{
 section {
     margin-bottom: 3rem;
     padding: 2rem;
-    background-color: rgba(139, 69, 19, 0.8);
+    background-color: var(--fondo-secciones);
     border-radius: 10px;
     border: 2px solid var(--dorado);
     box-shadow: 0 4px 8px rgba(0,0,0,0.3);
@@ -378,7 +410,7 @@ section {
 }
 
 .project_card {
-    background-color: rgba(245, 230, 211, 0.9);
+    background-color: var(--pergamino);
     padding: 1.5rem;
     border-radius: 8px;
     border: 2px solid var(--dorado);
@@ -419,7 +451,7 @@ section {
 }
 
 .hobbits_card {
-    background-color: rgba(245, 230, 211, 0.9);
+    background-color: var(--pergamino);
     padding: 1.5rem;
     border-radius: 8px;
     border: 2px solid var(--dorado);
@@ -453,7 +485,7 @@ section {
 }
 
 footer {
-    background-image: url(images/textura_cuero_verde.avif);
+    background-image: var(--fondo-header);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -484,6 +516,31 @@ footer {
 [data-theme="dark"] .nota-texto,
 [data-theme="dark"] .nota-firma {
     color: var(--pergamino);
+}
+
+#toggle-theme {
+    background: none;
+    border: 2px solid var(--dorado);
+    border-radius: 50%;
+    padding: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#toggle-theme img {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+}
+
+#toggle-theme:hover {
+    transform: scale(1.1);
+    border-color: #FFD700;
 }
 
 #toggle-musica {
@@ -545,6 +602,7 @@ footer {
     transition: all 0.3s ease;
     font-family: var(--fuente-secundaria);
     font-size: 0.9rem;
+    background-color: var(--color-notas);
 }
 
 .nota-contenido {
@@ -552,14 +610,14 @@ footer {
 }
 
 .nota-texto {
-    color: var(--marron);
+    color: var(--color-texto);
     margin-bottom: 0.5rem;
     word-wrap: break-word;
 }
 
 .nota-firma {
     font-weight: bold;
-    color: var(--marron);
+    color: var(--color-titulos);
     font-size: 0.8rem;
     text-align: right;
 }
@@ -606,7 +664,7 @@ footer {
     max-width: 100px;
     text-align: center;
     justify-items: center;
-    margin-left:10%;
+    margin-left:13%;
 }
 
 .btn-volver {
