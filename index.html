@@ -32,13 +32,7 @@
            
        </ul>
       
-       <audio id="musica-fondo"  loop>
-             <source src="sonido/medieval-citytavern-ambient-235876.mp3" type="audio/mpeg">
-             <source src="sonido/medieval-citytavern-ambient-235876.mp3" type="audio/mpeg">
-             <source src="sonido/midnight-forest-184304.mp3" type="audio/mpeg">
-             <source src="sonido/fantasy-forest-1-263881.mp3" type="audio/mpeg">
-             
-        </audio>
+       <audio id="musica-fondo"></audio>
         
     </nav>
  </header>
@@ -157,7 +151,7 @@
             
         </footer>
         
-    <script src="menuhamburguesa.js"></script>
+     <script src="menuhamburguesa.js"></script>
 
      <!-- Firebase SDK -->
      <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
@@ -166,22 +160,7 @@
      <!-- Tu tablón de pergaminos con Firebase -->
      <script src="tablon.js"></script>
 
-     <!-- Script de música (mantenemos como estaba) -->
-     <script>
-     const musica = document.getElementById('musica-fondo');
-     const boton = document.getElementById('toggle-musica');
-
-        boton.addEventListener('click', () => {
-      if (musica.paused) {
-        musica.play();
-        boton.textContent = '🔇 Silenciar Bardos';
-      } else {
-        musica.pause();
-        boton.textContent = '🎵 Música de Taberna';
-      }
-     });
-      musica.volume = 0.3; // Volumen suave
-   </script>
+     <script src="musica.js"></script>
 
    <div class="cookie-popup" id="cookiePopup">
     <p>Este sitio utiliza cokies para mejorar tu experiencia. <a href="cookies.html">Saber más</a> <button id="acceptCookies">Aceptar</button></p>
