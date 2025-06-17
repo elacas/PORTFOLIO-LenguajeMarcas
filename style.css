@@ -62,9 +62,9 @@ html {
 }
 
 [data-theme="dark"] {
-    --fondo-principal: url(images/MODO_OSCURO.avif); 
+    --fondo-principal: url(images/MODO_OSCURO_V2.png); 
     --fondo-header: url(images/estrellas.avif); 
-    --color-texto: #C0C0C0; 
+    --color-texto: #323232; 
     --color-titulos: #8ca432; 
     --fondo-secciones: rgba(44, 44, 44, 0.9);
     --fondo-tablon: url('images/tablon-piedra.avif'); 
@@ -484,7 +484,7 @@ section {
     height: 220px;
     object-fit: cover;
     border-radius: 5px;
-    margin-bottom: 0 auto 1rem auto;
+    margin-bottom: 0 auto 1rem;
     border: 2px solid var(--marron);
 }
 
@@ -521,7 +521,7 @@ footer {
     position: absolute;
     width: 200px;
     background: var(--color-notas);
-    border: 2px var(--borde-notas);
+    border:2px solid var(--borde-notas);
     border-radius: 5px;
     padding: 15px;
     transform: rotate(-2deg);
@@ -618,7 +618,6 @@ footer {
     transition: all 0.3s ease;
     font-family: var(--fuente-secundaria);
     font-size: 0.9rem;
-    background-color: var(--color-notas);
 }
 
 .nota-contenido {
