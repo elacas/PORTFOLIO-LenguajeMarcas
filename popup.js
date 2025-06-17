@@ -1,10 +1,6 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // ✅ AHORA SÍ funcionará
+document.addEventListener(function() {
     const popup = document.getElementById("cookiePopup");
     const btn = document.getElementById("acceptCookies");
-    
-    console.log("Popup:", popup); // Debug
-    console.log("Button:", btn);  // Debug
     
     if(!localStorage.cookiesAccepted){
         popup.classList.add("show");
@@ -15,3 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
         popup.classList.remove("show");
     });
 });
+
+
+
+
