@@ -156,6 +156,7 @@ header{
 .texto_sobremi p {
     text-align: left;
     line-height: 1.6;
+    margin: 0 auto;
 }
 
 .header_controls {
@@ -218,6 +219,7 @@ header{
     
     .texto_sobremi {
         order: 2;
+        margin-right: 5%;
     }
     
     .imagen_pixelart img {
