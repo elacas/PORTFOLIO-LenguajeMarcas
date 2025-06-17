@@ -46,6 +46,7 @@ html {
     max-width: 600px;
     width: 90%;
     z-index: 1000; 
+    display: block !important;/* Borrar */
     box-shadow: 0 8px 20px rgba(0,0,0,0.3);
     backdrop-filter: blur(5px);
     animation: slideUp 0.3s ease-out;
@@ -336,7 +337,6 @@ nav a:hover {
 
 body {
     background-image: url(images/MODO_CLARO.avif);
-    image-rendering: optimizeQuality;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
