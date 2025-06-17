@@ -10,12 +10,14 @@
     font-family: "UnZialish";
     src: url("fuente/montaraz_2/UnZialish.woff2") format("woff2");
     font-display: swap;
+    font-display: optional;
  }
 
  @font-face {
     font-family: "aniron";
     src:url("fuente/montaraz_1/Aniron.woff2") format("woff2");
     font-display: swap;
+    font-display: optional;
  }
 
 html {
