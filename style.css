@@ -486,6 +486,7 @@ footer {
     cursor: pointer;
     font-size: 1rem;
     transition: all 0.3s ease;
+    contain: layout;
 }
 
 #toggle-musica:hover {
