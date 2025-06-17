@@ -32,6 +32,13 @@ html {
     --fuente-secundaria: "aniron", serif;
 }
 
+[data-theme="dark"] {
+    
+    --fondo-tablon: url('images/tablon-piedra.avif'); 
+    --color-notas: #2C2C2C; 
+    --borde-notas: #FFD700; 
+}
+
 .cookie_popup {
     position: fixed;
     bottom: 20px;
@@ -459,7 +466,7 @@ footer {
 .tablon-container {
     position: relative;
     min-height: 400px;
-    background: url('images/tablon-madera.avif');
+    background: var(--fondo-tablon);
     border: 3px solid var(--dorado);
     border-radius: 10px;
 }
@@ -467,13 +474,18 @@ footer {
 .nota-pergamino {
     position: absolute;
     width: 200px;
-    background: #F4E4BC;
-    border: 2px solid #8B4513;
+    background: var(--color-notas);
+    border: 2px var(--borde-notas);
     border-radius: 5px;
     padding: 15px;
     transform: rotate(-2deg);
     box-shadow: 3px 3px 8px rgba(0,0,0,0.3);
     cursor: pointer;
+}
+
+[data-theme="dark"] .nota-texto,
+[data-theme="dark"] .nota-firma {
+    color: var(--pergamino);
 }
 
 #toggle-musica {
