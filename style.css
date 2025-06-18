@@ -205,6 +205,8 @@ header{
     line-height: 1.6;
     margin: 0 auto;
     text-rendering: optimizeSpeed; /* Renderizado rápido */
+    font-display: swap; /* Mostrar texto mientras carga fuente */
+    will-change: auto;
 }
 
 .header_controls {
