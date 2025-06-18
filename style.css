@@ -375,7 +375,7 @@ nav a {
 
 nav a:hover {
     border-color: var(--dorado);
-    background-color: #015606;
+    background-color:#015606;
 }
 
 body {
@@ -526,8 +526,8 @@ footer {
 }
 
 #toggle-theme {
-    background: none;
-    border: 2px solid var(--dorado);
+    background: var(--plata); 
+    border: 2px solid var(--plata);
     border-radius: 50%;
     padding: 0.5rem;
     cursor: pointer;
@@ -547,7 +547,7 @@ footer {
 
 #toggle-theme:hover {
     transform: scale(1.1);
-    border-color: #FFD700;
+    border-color: var(--fondo-secciones);
 }
 
 #toggle-musica {
