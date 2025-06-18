@@ -433,9 +433,9 @@ section {
 
 .project_card img{
     width: 100%;
-    max-width: 100%;
     height: 200px;
     object-fit: cover;
+    background-attachment: fixed;
     border-radius: 5px;
     margin: 0 auto 1rem auto;
     border: 2px solid var(--marron);
@@ -474,9 +474,9 @@ section {
 
 .hobbits_card img{
     width: 100%;
-    max-width:100%;
     height: 220px;
-    object-fit: cover;
+    object-fit: content;
+    background-attachment: fixed;
     border-radius: 5px;
     margin-bottom: 0 auto 1rem;
     border: 2px solid var(--marron);
