@@ -383,8 +383,10 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     min-height: 100vh;
     font-family: var(--fuente-secundaria);
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 main{
