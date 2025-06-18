@@ -538,6 +538,11 @@ footer {
     border-color: var(--dorado);
 }
 
+[data-theme="dark"] #toggle-theme:hover {
+     background: var(--dorado);
+    border-color: var(--plata);
+}
+
 #toggle-theme {
     background: var(--pergamino); 
     border: 2px solid #015606;
@@ -559,8 +564,8 @@ footer {
 
 #toggle-theme:hover {
     transform: scale(1.1);
-    border-color: var(--fondo-secciones);
-    background-color: rgb(16, 103, 16);
+    border-color: var(--pergamino);
+    background-color:  rgb(16, 103, 16);
 }
 
 #toggle-musica {
