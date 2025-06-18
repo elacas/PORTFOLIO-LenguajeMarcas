@@ -53,7 +53,7 @@ html {
 
 [data-theme="dark"] {
     --fondo-principal: url(images/MODO_OSCURO_V2.png); 
-    --fondo-header: url(images/estrellas.avif); 
+    --fondo-header: url(images/cuero_azul.avif); 
     --color-texto: #828080; 
     --color-titulos: #8ca432; 
     --fondo-secciones: rgba(44, 44, 44, 0.9);
@@ -529,8 +529,7 @@ footer {
 }
 
 [data-theme="dark"] p {
-    font-size: 1.8rem; 
-
+    font-size: 1.8rem;
 }
 
 #toggle-theme {
@@ -550,7 +549,6 @@ footer {
 #toggle-theme img {
     width: 24px;
     height: 24px;
-    transition: transform 0.3s ease;
 }
 
 #toggle-theme:hover {
