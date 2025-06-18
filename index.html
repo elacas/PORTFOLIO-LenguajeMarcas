@@ -3,6 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <style>
+     body { 
+    background-image: var(--fondo-principal);
+    font-family: var(--fuente-secundaria);
+    }  
+     header {
+    background-image: var(--fondo-header);
+    }
+    </style>
     <link rel="preload" href="images/foto_perfil.avif" as="image">
     <link rel="preload" href="images/MODO_CLARO.avif" as="image">
     <link rel="preload" href="fuente/montaraz_2/UnZialish.woff2" as="font" type="font/woff2" crossorigin><meta name="google" content="translate">
@@ -46,7 +55,7 @@
         <section id="sobre_mi">
             <div class="imagen_pixelart">
              <a href="index.html">
-                <img src="images/foto_perfil.avif" alt="avatar Elaine-Desarrolladora y aventurera tecnológica" title="retrato pixel-art"></a>
+                <img src="images/foto_perfil.avif" alt="avatar Elaine-Desarrolladora y aventurera tecnológica" loading="lazy" width="200" height="300" title="retrato pixel-art"></a>
             </div>
             
             <div class="texto_sobremi"><h1>sobre mi</h1>
