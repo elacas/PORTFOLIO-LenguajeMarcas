@@ -532,6 +532,10 @@ footer {
     font-size: 1.8rem;
 }
 
+[data-theme="dark"] #toggle-theme img {
+    filter: invert(1); 
+}
+
 #toggle-theme {
     background: var(--plata); 
     border: 2px solid var(--plata);
