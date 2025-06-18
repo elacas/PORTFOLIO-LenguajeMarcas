@@ -27,15 +27,12 @@ function cargarCancion(rutaCancion) {
     musica.load();
 }
 
-// ✅ UN SOLO EVENT LISTENER - FUNCIONALIDAD COMPLETA
+// ✅ EVENT LISTENER CON RANDOMIZACIÓN
 boton.addEventListener('click', () => {
     if (musica.paused) {
-        // ✅ CARGAR CANCIÓN ALEATORIA solo si no está cargada
-        if (!audioLoaded) {
-            const cancionAleatoria = seleccionarCancionAleatoria();
-            cargarCancion(cancionAleatoria);
-            audioLoaded = true;
-        }
+        // ✅ SIEMPRE cargar canción aleatoria
+        const cancionAleatoria = seleccionarCancionAleatoria();
+        cargarCancion(cancionAleatoria);
         
         musica.play();
         boton.textContent = '🔇 Silenciar Bardos';
