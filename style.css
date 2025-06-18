@@ -531,7 +531,7 @@ footer {
 
 [data-theme="dark"] .nota-texto,
 [data-theme="dark"] .nota-firma {
-    color: var(--pergamino);
+    color: var(--marron);
 }
 
 #toggle-theme {
@@ -625,7 +625,7 @@ footer {
 }
 
 .nota-texto {
-    color: var(--color-texto);
+    color: var(--borde-notas);
     margin-bottom: 0.5rem;
     word-wrap: break-word;
 }
