@@ -1,23 +1,19 @@
-let audioLoaded = false;
-
-boton.addEventListener('click', () => {
-    if (!audioLoaded) {
-        // ✅ CARGAR AUDIO SOLO AL PRIMER CLICK
-        const cancionAleatoria = seleccionarCancionAleatoria();
-        cargarCancion(cancionAleatoria);
-        audioLoaded = true;
-        }
-
 // MÚSICA CON REPRODUCCIÓN ALEATORIA
 const canciones = [
     "sonido/medieval-citytavern-ambient-235876.mp3",
     "sonido/midnight-forest-184304.mp3", 
     "sonido/fantasy-forest-1-263881.mp3"
-    // Añade más canciones aquí
 ];
 
-let cancionActual = 0;
+let audioLoaded = false;
 let musicaActiva = false;
+
+// Elementos del DOM
+const musica = document.getElementById('musica-fondo');
+const boton = document.getElementById('toggle-musica');
+
+// Configurar volumen
+musica.volume = 0.3;
 
 // Función para seleccionar canción aleatoria
 function seleccionarCancionAleatoria() {
@@ -27,27 +23,26 @@ function seleccionarCancionAleatoria() {
 
 // Función para cargar nueva canción
 function cargarCancion(rutaCancion) {
-    const musica = document.getElementById('musica-fondo');
     musica.src = rutaCancion;
-    musica.load(); // Recargar el elemento audio
+    musica.load();
 }
 
-// Script del botón música MEJORADO
-const musica = document.getElementById('musica-fondo');
-const boton = document.getElementById('toggle-musica');
-
+// ✅ UN SOLO EVENT LISTENER - FUNCIONALIDAD COMPLETA
 boton.addEventListener('click', () => {
     if (musica.paused) {
-        // ✅ CARGAR CANCIÓN ALEATORIA
-        const cancionAleatoria = seleccionarCancionAleatoria();
-        cargarCancion(cancionAleatoria);
+        // ✅ CARGAR CANCIÓN ALEATORIA solo si no está cargada
+        if (!audioLoaded) {
+            const cancionAleatoria = seleccionarCancionAleatoria();
+            cargarCancion(cancionAleatoria);
+            audioLoaded = true;
+        }
         
         musica.play();
         boton.textContent = '🔇 Silenciar Bardos';
         musicaActiva = true;
     } else {
         musica.pause();
-        boton.textContent = '🎵 Música de Taberna';
+        boton.textContent = '🎵 Música';
         musicaActiva = false;
     }
 });
@@ -60,5 +55,3 @@ musica.addEventListener('ended', () => {
         musica.play();
     }
 });
-});
-musica.volume = 0.3;
