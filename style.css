@@ -20,13 +20,13 @@
 
   @font-face {
     font-family: "Quidity";
-    src:url("fuente/elves_1/Quidity.woff2") format("woff2");
+    src:url("fuente/Elves_6/Half-ElvenBold.woff2") format("woff2");
     font-display: swap;
  }
 
  @font-face {
     font-family: "yafit";
-    src:url("fuente/elves_1/Quidity.woff2") format("woff2");
+    src:url("fuente/Elves_5/HobbitonHandscrawl.woff2") format("woff2");
     font-display: swap;
  }
 
@@ -54,7 +54,7 @@ html {
 [data-theme="dark"] {
     --fondo-principal: url(images/MODO_OSCURO_V2.png); 
     --fondo-header: url(images/estrellas.avif); 
-    --color-texto: #323232; 
+    --color-texto: #828080; 
     --color-titulos: #8ca432; 
     --fondo-secciones: rgba(44, 44, 44, 0.9);
     --fondo-tablon: url('images/tablon-piedra.avif'); 
@@ -67,6 +67,8 @@ html {
     --dorado: #8ca432;
     --marron: #2C2C2C;
     --pergamino: #C0C0C0;
+    --font-size: 1.1e2m;
+    
 
 }
 
@@ -523,6 +525,12 @@ footer {
 [data-theme="dark"] .nota-texto,
 [data-theme="dark"] .nota-firma {
     color: var(--marron);
+    font-size: 1.3rem;
+}
+
+[data-theme="dark"] p {
+    font-size: 1.8rem; 
+
 }
 
 #toggle-theme {
