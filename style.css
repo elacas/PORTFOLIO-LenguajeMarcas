@@ -68,7 +68,7 @@ html {
     --dorado: #8ca432;
     --marron: #2C2C2C;
     --pergamino: #C0C0C0;
-    --font-size: 1.1e2m;
+    --font-size: 1.1rem;
     
 
 }
@@ -205,8 +205,6 @@ header{
     line-height: 1.6;
     margin: 0 auto;
     text-rendering: optimizeSpeed; /* Renderizado rápido */
-    font-display: swap; /* Mostrar texto mientras carga fuente */
-    will-change: auto;
 }
 
 .header_controls {
