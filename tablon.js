@@ -152,7 +152,7 @@ class Tablon {
         // Event listener para eliminar
         elemento.querySelector('.nota-eliminar').addEventListener('click', (e) => {
             e.stopPropagation();
-            this.eliminarNota(nota.id, elemento);
+            intentarBorrar(nota.id, elemento);
         });
 
         // Efectos hover
