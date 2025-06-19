@@ -53,7 +53,7 @@ html {
 }
 
 [data-theme="dark"] {
-    --fondo-principal: url(images/MODO_OSCURO.avif); 
+    --fondo-principal: url(imagesMODO_OSCURO.avif); 
     --fondo-header: url(images/cuero_azul.avif); 
     --color-texto: #828080; 
     --color-titulos: #8ca432; 
@@ -78,7 +78,7 @@ html {
     bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
-    background-color: solid var(--fondo-secciones);
+    background-color: var(--fondo-secciones);
     color: var(--color-texto);
     padding: 20px;
     border-radius: 10px;
@@ -104,7 +104,7 @@ html {
 }
 
 .cookie_popup button {
-    background-color: solid var(--marron);
+    background-color: var(--marron);
     color: var(--dorado);
     border: 2px solid var(--dorado);
     padding: 8px 14px;
@@ -526,11 +526,11 @@ footer {
 [data-theme="dark"] .nota-texto,
 [data-theme="dark"] .nota-firma {
     color: var(--marron);
-    font-size: 1.5rem;
+    font-size: 1.3rem;
 }
 
 [data-theme="dark"] p {
-    font-size: 1.9rem;
+    font-size: 1.8rem;
 }
 
 [data-theme="dark"] #toggle-theme {
