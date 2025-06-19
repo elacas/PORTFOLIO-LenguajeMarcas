@@ -53,7 +53,7 @@ html {
 }
 
 [data-theme="dark"] {
-    --fondo-principal: url(imagesMODO_OSCURO.avif); 
+    --fondo-principal: url(images/MODO_OSCURO_V2.png); 
     --fondo-header: url(images/cuero_azul.avif); 
     --color-texto: #828080; 
     --color-titulos: #8ca432; 
