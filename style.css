@@ -78,7 +78,7 @@ html {
     bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
-    background-color: var(--fondo-secciones);
+    background-color: solid var(--fondo-secciones);
     color: var(--color-texto);
     padding: 20px;
     border-radius: 10px;
