@@ -104,7 +104,7 @@ html {
 }
 
 .cookie_popup button {
-    background-color:linear-gradient(45deg, var(--fondo-seccioness), var(--borde-notas)); 
+    background-color: solid var(--marron);
     color: var(--dorado);
     border: 2px solid var(--dorado);
     padding: 8px 14px;
@@ -541,11 +541,6 @@ footer {
 [data-theme="dark"] #toggle-theme:hover {
      background: var(--dorado);
     border-color: var(--plata);
-}
-
-
-[data-theme="dark"].cookie_popup button {
-    background-color:linear-gradient(45deg, var(--fondo-seccioness), var(--azul));
 }
 
 [data-theme="dark"] .toast-fantasia{
