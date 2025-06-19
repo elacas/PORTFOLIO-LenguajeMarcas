@@ -11,7 +11,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Botón aceptar
     btn.addEventListener("click", function(){
-        console.log("🍪 Botón aceptar clickeado");
         localStorage.setItem('cookiesAccepted', 'true');
         popup.classList.remove("show");
     });
