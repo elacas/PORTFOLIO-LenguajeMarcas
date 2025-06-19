@@ -64,7 +64,7 @@ html {
     --fuente-principal: "Quidity";
     --fuente-secundaria: "yafit";
     --plata: #8f8e8efa;
-    --azul:#3b23a5;
+    --azul:#1a0a60d5;
     --dorado: #8ca432;
     --marron: #2C2C2C;
     --pergamino: #C0C0C0;
@@ -541,6 +541,11 @@ footer {
 [data-theme="dark"] #toggle-theme:hover {
      background: var(--dorado);
     border-color: var(--plata);
+}
+
+[data-theme="dark"] .toast-fantasia{
+    background: linear-gradient(45deg, var(--fondo-secciones), var(--azul));
+
 }
 
 #toggle-theme {
