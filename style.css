@@ -83,11 +83,11 @@ html {
     padding: 20px;
     border-radius: 10px;
     border: 3px solid var(--plata);
-    display: none;
+    display: flex;
     justify-content: space-between;
     align-items: center;
     opacity: 0;
-    visibility: invisible;
+    visibility: hidden;
     pointer-events: none;
     max-width: 500px;
     width: 90%;
@@ -97,7 +97,7 @@ html {
 
 .cookie_popup.show{
     opacity: 1;
-    display: flex;
+    visibility: visible;
     pointer-events: auto;
      z-index: 9999;
 
