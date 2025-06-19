@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Mostrar popup si no hay cookies aceptadas
     if(!localStorage.getItem('cookiesAccepted')){;
         popup.classList.add("show");
+    }
 
     // Botón aceptar
     btn.addEventListener("click", function(){
