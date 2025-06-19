@@ -53,7 +53,7 @@ html {
 }
 
 [data-theme="dark"] {
-    --fondo-principal: url(images/MODO_OSCURO_V2.png); 
+    --fondo-principal: url(images/MODO_OSCURO.avif); 
     --fondo-header: url(images/cuero_azul.avif); 
     --color-texto: #828080; 
     --color-titulos: #8ca432; 
@@ -77,6 +77,7 @@ html {
     position: fixed;
     bottom: 20px;
     left: 50%;
+    transform: translateX(-50%);
     background-color: var(--fondo-secciones);
     color: var(--color-texto);
     padding: 20px;
@@ -103,7 +104,7 @@ html {
 }
 
 .cookie_popup button {
-    background-color: var(--marron);
+    background-color: solid var(--marron);
     color: var(--dorado);
     border: 2px solid var(--dorado);
     padding: 8px 14px;
