@@ -104,7 +104,7 @@ html {
 }
 
 .cookie_popup button {
-    background-color: solid var(--marron);
+    background-color:linear-gradient(45deg, var(--fondo-seccioness), var(--borde-notas)); 
     color: var(--dorado);
     border: 2px solid var(--dorado);
     padding: 8px 14px;
@@ -526,11 +526,11 @@ footer {
 [data-theme="dark"] .nota-texto,
 [data-theme="dark"] .nota-firma {
     color: var(--marron);
-    font-size: 1.3rem;
+    font-size: 1.5rem;
 }
 
 [data-theme="dark"] p {
-    font-size: 1.8rem;
+    font-size: 1.9rem;
 }
 
 [data-theme="dark"] #toggle-theme {
@@ -541,6 +541,11 @@ footer {
 [data-theme="dark"] #toggle-theme:hover {
      background: var(--dorado);
     border-color: var(--plata);
+}
+
+
+[data-theme="dark"].cookie_popup button {
+    background-color:linear-gradient(45deg, var(--fondo-seccioness), var(--azul));
 }
 
 [data-theme="dark"] .toast-fantasia{
